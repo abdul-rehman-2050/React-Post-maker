@@ -9,7 +9,7 @@ import {
   Typography
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
+import { red, white, green } from "@material-ui/core/colors";
 //import { FavoriteIcon, ShareIcon } from "@material-ui/icons";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
@@ -21,7 +21,8 @@ export default function PostCard(props) {
     },
     content: {
       height: 300,      
-      backgroundColor: props.bgcolor[400]
+      backgroundColor: props.bgcolor[400],
+	  color:white
     },
     avatar: {
       backgroundColor: red[500]
@@ -40,7 +41,7 @@ export default function PostCard(props) {
         subheader="September 14, 2016"
       />
       <CardContent className={classes.content}>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="h3"  component="p">
           {props.content}
         </Typography>
       </CardContent>
