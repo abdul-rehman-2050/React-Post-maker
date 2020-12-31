@@ -85,28 +85,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <TopBar />
-        <h1>Hello StackBlitz!</h1>
-        <p>Start editing to see some magic happen :)</p>
-        <Button color="primary">Hello World</Button>
-        <Button variant="contained">Default</Button>
-        <Button variant="contained" color="primary">
-          Primary
-        </Button>
-        <Button variant="contained" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="contained" disabled>
-          Disabled
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          startIcon={<DeleteIcon />}
-        >
-          Delete
-        </Button>
-
-        <Grid container spacing={3}>
+       
+        <Grid container spacing={3} style={{marginTop:8}}>
           <Grid item xs={3}>
             <Hidden xsDown>
               <Paper elevation={3} className={classes.paper}>
