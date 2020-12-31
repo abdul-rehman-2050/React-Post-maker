@@ -10,7 +10,9 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
-import { FavoriteIcon, ShareIcon } from "@material-ui/icons";
+//import { FavoriteIcon, ShareIcon } from "@material-ui/icons";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
 
 export default function PostCard(props) {
   const classes = makeStyles(theme => ({
@@ -18,8 +20,7 @@ export default function PostCard(props) {
       maxWidth: 345
     },
     content: {
-      height: 300,
-      overflow: auto,
+      height: 300,      
       backgroundColor: props.bgcolor[400]
     },
     avatar: {
