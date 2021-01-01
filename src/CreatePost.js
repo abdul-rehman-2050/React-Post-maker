@@ -5,15 +5,10 @@ https://github.com/KhoaMilan97/practice-react-material-ui/blob/master/src/compon
  */
 
 import React, { useState, useEffect, useContext } from "react";
-import { Paper, InputBase, Collapse, Button } from "@material-ui/core";
+import { Paper,Grid, CircularProgress,TextField,FormControl,InputBase,InputLabel, Collapse, Button } from "@material-ui/core";
 import { withStyles, makeStyles, fade } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import InputBase from "@material-ui/core/InputBase";
-import InputLabel from "@material-ui/core/InputLabel";
+
+
 
 const BootstrapInput = withStyles(theme => ({
   root: {
