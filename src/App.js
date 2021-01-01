@@ -84,7 +84,7 @@ export default function App() {
     bgcolor: green
   };
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <TopBar />
 
