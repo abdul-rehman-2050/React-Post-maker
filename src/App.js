@@ -9,6 +9,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import TopBar from "./TopBar.js";
 import PostCard from "./PostCard.js";
+import CreatePost from "./CreatePost.js";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -97,6 +98,7 @@ export default function App() {
           </Grid>
 
           <Grid item md={6} sm={8}>
+            <CreatePost />
             <PostCard
               content={post.content}
               book={post.book}
