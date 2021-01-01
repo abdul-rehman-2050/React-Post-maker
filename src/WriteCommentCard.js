@@ -56,10 +56,8 @@ export default function CreatePost() {
 	  <CardContent className={classes.content}>		        
 		<TextField 
 			id="outlined-basic" 
-			label="Write New Post"
-			variant="outlined" 		
-			multiline
-			rowsMax={6}			
+			label="Write Comment"
+			variant="outlined" 			
 			fullWidth/>	
 
 	  </CardContent>	   
