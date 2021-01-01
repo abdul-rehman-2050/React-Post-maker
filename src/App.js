@@ -6,6 +6,7 @@ import { red, white, green } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 import TopBar from "./TopBar.js";
 import PostCard from "./PostCard.js";
 
@@ -85,9 +86,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <TopBar />
-       
-        <Grid container spacing={3} style={{marginTop:8}}>
-          <Grid item xs={3}>
+
+        <Grid container spacing={3} style={{ marginTop: 8 }}>
+          <Grid item sm={4} md={3}>
             <Hidden xsDown>
               <Paper elevation={3} className={classes.paper}>
                 xs=6
@@ -95,7 +96,7 @@ export default function App() {
             </Hidden>
           </Grid>
 
-          <Grid item sm={6} xs={12}>
+          <Grid item md={6} sm={8}>
             <PostCard
               content={post.content}
               book={post.book}
@@ -105,7 +106,7 @@ export default function App() {
           </Grid>
 
           <Grid item xs={3}>
-            <Hidden xsDown>
+            <Hidden smDown>
               <Paper className={classes.paper}>xs=3</Paper>
             </Hidden>
           </Grid>
