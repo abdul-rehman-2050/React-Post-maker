@@ -1,6 +1,6 @@
 import { red, amber, grey } from "@material-ui/core/colors";
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
-import Fonts from "./assets/fonts";
+import Fonts from "./assets/fonts.js";
 
 const fontFamilyRoboto = {
   fontFamily: [
@@ -30,7 +30,8 @@ const lightMuiTheme = createMuiTheme({
   type: "light",
   palette: {
     primary: {
-      main: "#FFF"
+      main: "#ff4400",
+      contrastText: "#fff"
     },
     secondary: {
       main: amber[500],

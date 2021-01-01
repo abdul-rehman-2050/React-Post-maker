@@ -1,3 +1,13 @@
+/*
+Borrowed from: 
+https://github.com/anselm94/googlekeepclone/blob/master/web/src/components/mainarea/TodoCreate.js
+
+
+
+*/
+
+
+
 import React, { useState, useEffect, useContext } from "react";
 import {
   Paper,
@@ -41,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     lineHeight: "1rem",
     verticalAlign: "middle",
-    color: theme.text.primary
+    color: theme.palette.text.primary
   },
   inputNoteRoot: {
     ...theme.custom.fontFamily.roboto,
@@ -64,13 +74,31 @@ const useStyles = makeStyles(theme => ({
 export default function CreatePost() {
   const classes = useStyles();
   const theme = useTheme();
+  const [color, setColor] = useState("default");
+  const [isFocussed, setFocussed] = useState(false);
+  const [title, setTitle] = useState("");
   return (
     <Paper
       elevation={2}
       classes={{ root: classes.paperWrapper }}
       style={{ backgroundColor: theme.custom.palette.noteBackground[color] }}
     >
-      <input type="text" />
+      <InputBase
+          placeholder={isFocussed ? "Title" : "Take a note..."}
+          classes={{
+            root: isFocussed ? classes.inputTitleRoot : classes.inputNoteRoot,
+            input: classes.inputTitleInput
+          }}
+          onFocus={() => setFocussed(true)}
+          inputProps={{ "aria-label": "note title" }}
+          value={title}
+          onChange={event => setTitle(event.target.value)}
+        />
+		<div>
+            <Button size="small">
+              Close
+            </Button>
+          </div>
     </Paper>
   );
 }
