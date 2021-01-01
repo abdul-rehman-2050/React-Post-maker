@@ -10,7 +10,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import TopBar from "./TopBar.js";
 import PostCard from "./PostCard.js";
 import CreatePost from "./CreatePost2.js";
-
+import { light } from "./theme";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -84,7 +84,7 @@ export default function App() {
     bgcolor: green
   };
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={light}>
       <div className={classes.root}>
         <TopBar />
 
