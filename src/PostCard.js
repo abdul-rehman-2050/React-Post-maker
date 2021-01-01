@@ -11,22 +11,22 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 //import { FavoriteIcon, ShareIcon } from "@material-ui/icons";
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareIcon from "@material-ui/icons/Share";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 export default function PostCard(props) {
   const classes = makeStyles(theme => ({
     root: {
       maxWidth: 345
     },
     content: {
-      height: 400,      
-	  overflow: 'auto',
-	  
+      height: 400,
+      overflow: "auto",
+
       backgroundColor: props.bgcolor[400],
-	  color: "#FFFFFF",
-	  display: "flex",
-	  flexDirection: "column",
+      color: "#FFFFFF",
+      display: "flex",
+      flexDirection: "column",
       justifyContent: "center"
     },
     avatar: {
@@ -46,7 +46,7 @@ export default function PostCard(props) {
         subheader="September 14, 2016"
       />
       <CardContent className={classes.content}>
-        <Typography variant="h4"  align="center" component="p">
+        <Typography variant="h4" align="center" component="p">
           {props.content}
         </Typography>
       </CardContent>
@@ -56,6 +56,9 @@ export default function PostCard(props) {
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
+        </IconButton>
+        <IconButton style={{ marginLeft: "auto" }}>
+          <ChatBubbleOutlineIcon />
         </IconButton>
       </CardActions>
     </Card>
