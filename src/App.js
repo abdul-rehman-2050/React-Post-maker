@@ -6,6 +6,7 @@ import { red, white, green } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 import TopBar from "./TopBar.js";
 import PostCard from "./PostCard.js";
 
