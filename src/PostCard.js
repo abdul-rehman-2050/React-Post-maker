@@ -20,7 +20,7 @@ export default function PostCard(props) {
       maxWidth: 345
     },
     content: {
-      height: 300,      
+      height: 400,      
 	  overflow: 'auto',
 	  
       backgroundColor: props.bgcolor[400],
