@@ -9,5 +9,5 @@ export default (RoundAvatar = props => {
     border: "3px solid #8FBC8F",
     backgroundColor: props.bgcolor
   };
-  return <Avatar style={props.isonline ? onlineStyle : null} />;
+return <Avatar style={props.isonline ? onlineStyle : null} >{props.displaychar}</Avatar>;
 });

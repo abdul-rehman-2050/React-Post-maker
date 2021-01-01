@@ -46,9 +46,8 @@ export default function PostCard(props) {
     <Card>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
+          <RoundedAvatar displaychar={'R'} bgcolor={red[500]} isonline={true}/>
+          
         }
         title={props.book}
         subheader="September 14, 2016"
