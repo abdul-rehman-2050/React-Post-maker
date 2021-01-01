@@ -18,7 +18,7 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-
+import RoundedAvatar from "./RoundedAvatar.js"
 export default function PostCard(props) {
   const classes = makeStyles(theme => ({
     root: {
