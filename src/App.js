@@ -10,7 +10,6 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import TopBar from "./TopBar.js";
 import PostCard from "./PostCard.js";
 import CreatePost from "./CreatePost2.js";
-import { light } from "./theme";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
