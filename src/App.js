@@ -98,7 +98,7 @@ export default function App() {
           </Grid>
 
           <Grid item md={6} sm={8}>
-            <CreatePost />
+            
             <PostCard
               content={post.content}
               book={post.book}
