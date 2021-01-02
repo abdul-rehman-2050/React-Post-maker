@@ -16,60 +16,44 @@ import RoundedAvatar from "./RoundedAvatar.js"
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-	marginBottom: 16
+	marginTop:8,
+	marginBottom:8
   },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
+  textfield:{
+	  marginLeft:8,
+	  marginRight: 8,
   },
-  content: {
-    flex: '1 0 auto',
-  },
-  cover: {
-    width: 151,
-  },
-  controls: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
+  roundpill:{
+	borderRadius:25,
+	marginTop:8,
+	marginBottom:8,
+	paddingLeft:18,
+	paddingRight:18	
+  }
+ 
 }));
 
 
 export default function CreatePost() {
 	 const classes = useStyles();
   return (
-  <Card className={classes.root}>  
-  <CardHeader
-        avatar={
-          <RoundedAvatar displaychar={'R'} bgcolor={red[500]} isonline={true}/>
-          
-        }
-        
-      />
-      
-	  <CardContent className={classes.content}>		        
+    <div className={classes.root}>  
+  
+         
+        <RoundedAvatar displaychar={'R'} bgcolor={red[500]} isonline={true}/>                       
+	         
 		<TextField 
+			className = {classes.textfield}
 			id="outlined-basic" 
 			label="Write Comment"
 			variant="outlined" 			
 			fullWidth/>	
-
-	  </CardContent>	   
-	  <CardActions>
-		<Button variant="contained" color="primary">    
-           Create
+	  
+		<Button variant="contained" color="primary" className={classes.roundpill}>    
+           Comment
 		</Button> 
-		
-	  </CardActions>
-	 
 	
-  </Card>
+    </div>
   
   
   );

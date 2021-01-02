@@ -7,7 +7,8 @@ import {
   Avatar,
   IconButton,
   Typography,
-  Badge
+  Badge,
+  Divider,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
@@ -19,6 +20,11 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import RoundedAvatar from "./RoundedAvatar.js"
+import WriteCommentCard from "./WriteCommentCard.js"
+
+
+
+
 export default function PostCard(props) {
   const classes = makeStyles(theme => ({
     root: {
@@ -32,7 +38,8 @@ export default function PostCard(props) {
       color: "#FFFFFF",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center"
+      justifyContent: "center",
+	  marginBottom:4,
     },
     avatar: {
       backgroundColor: red[500]
@@ -57,6 +64,7 @@ export default function PostCard(props) {
           {props.content}
         </Typography>
       </CardContent>
+	   <Divider/>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <Badge badgeContent={4} color="primary">
@@ -71,8 +79,8 @@ export default function PostCard(props) {
         </IconButton>
       </CardActions>
 
-      <AccountCircle />
-      <TextField id="input-with-icon-grid" label="Write Comment..." />
+      <Divider/>
+      <WriteCommentCard/>
     </Card>
   );
 }
