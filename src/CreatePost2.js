@@ -13,12 +13,15 @@ import {
   Button,
   TextField,
   Grid,
-  Divider
+  Divider,
+  Tooltip 
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import { borders } from "@material-ui/system";
 import RoundedAvatar from "./RoundedAvatar.js";
+import FormatColorFillIcon from '@material-ui/icons/FormatColorFill';
+import ColorLensTwoToneIcon from '@material-ui/icons/ColorLensTwoTone';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,14 +47,21 @@ const useStyles = makeStyles(theme => ({
   controls: {
     display: "flex",
     alignItems: "center",  
-    paddingBottom: theme.spacing(1)
+    paddingBottom: theme.spacing(1),
+	
   },
  
   pillButton:{
 	marginLeft: "auto",
     borderRadius: 50,
 	paddingLeft: theme.spacing(8),
-	paddingRight: theme.spacing(8)
+	paddingRight: theme.spacing(8),
+	marginLeft: "auto"
+  },
+  
+  iconsControls:{
+	  color:  theme.palette.warning.main,
+	  fontSize: 25 
   }
 }));
 
@@ -94,8 +104,14 @@ export default function CreatePost() {
 		   />		
 		
 			</div>
-        
-       
+		
+			<div style={{display:"flex"}}>
+        <Tooltip title="Background Color">
+			<IconButton >
+				<ColorLensTwoToneIcon aria-label="Background Color" className={classes.iconsControls}/>
+			</IconButton>
+		</Tooltip>
+		  
           <Button
             variant="contained"
             color="primary"
@@ -103,6 +119,8 @@ export default function CreatePost() {
           >
             Create
           </Button>
+		  
+		  </div>
 		</div>
       
     </Paper>
